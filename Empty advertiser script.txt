@@ -1,0 +1,119 @@
+import discum
+import time
+import random
+
+bot = discum.Client(token='TOKEN', log=False)
+text = ("MESSAGE")
+
+Sleep = 5000 # Input the time you want it to wait after it's advertised to all servers here
+
+IDs = [
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+""
+] # Input the servers you want here, if you want more servers, add another comma and quotationsmark, however don't add a comma to the end
+
+while True:
+    for id in IDs:
+        print("Advertised in " + str(id) + ".")
+        bot.sendMessage(id, text)
+        time.sleep(random.randint(10,20))
+    print("Advertised to " + str(len(IDs)) + " channels. Going to sleep for " + str(Sleep) + " seconds (" + str(Sleep/60) + " minutes)\n")
+
+    for num in range(Sleep):
+        time.sleep(1)
+        print(str(Sleep-num) + " seconds before advertising again.")
+    print("Waiting complete, starting over loop\n")
